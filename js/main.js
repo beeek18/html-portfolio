@@ -6,7 +6,6 @@ if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").match
   document.body.classList.add('dark')
 }
 
-
 //2.  check dark mode in localStorage
 if (localStorage.getItem('darkMode') === 'dark') {
   btnDarkMode.classList.add('dark-mode-btn--active')
@@ -15,7 +14,6 @@ if (localStorage.getItem('darkMode') === 'dark') {
   btnDarkMode.classList.remove('dark-mode-btn--active')
   document.body.classList.remove('dark')
 }
-
 
 //3.if change system settings, change theme
 window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', (event) => {
@@ -33,10 +31,7 @@ window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', (ev
 
 })
 
-
-
-
-//on/of dark mode
+//on/off dark mode
 btnDarkMode.onclick = function () {
   btnDarkMode.classList.toggle("dark-mode-btn--active");
   const isDark = document.body.classList.toggle("dark")
